@@ -17,7 +17,15 @@ Como o sistema não possuía uma especificação técnica formal (SDR), foi real
 
 ---
 
-## 📋 2. Execução dos Casos de Teste (STLC - Fase 5)
+## 🏗️ 2. Planejamento e Configuração do Ambiente (STLC - Fase 4)
+
+Para a execução dos testes, foi utilizado o ambiente de homologação pública hospedado na plataforma Netlify através da URL oficial fornecida. 
+* **Massa de Dados:** Foram mapeados os cards de ferramentas reais de IA já renderizados na interface.
+* **Ferramental:** Utilizou-se o Google Chrome DevTools para emulação de dispositivos móveis (Viewports) e monitoramento de logs de rede/console do navegador (Client-side).
+
+---
+
+## 📋 3. Execução dos Casos de Teste (STLC - Fase 5)
 
 ### CT-01: Validar redirecionamento dos botões de ação do catálogo
 * **Pré-condição:** Navegador atualizado e conexão com a internet ativa.
@@ -50,7 +58,7 @@ Como o sistema não possuía uma especificação técnica formal (SDR), foi real
 
 > 📝 **Nota do Q.A. (Evidência Técnica):** Ao digitar `@`, o sistema ignorou a busca e manteve a listagem de ferramentas padrão visível, em vez de alertar o usuário sobre a falta de resultados para aquele termo específico. Nenhuma requisição de rede foi disparada (filtro puramente local via JavaScript).
 
-🏁 3. Encerramento e Conclusão (STLC - Fase 6)
+🏁 4. Encerramento e Conclusão (STLC - Fase 6)
 
 Total de Casos de Teste Planejados: 3
 
@@ -68,7 +76,7 @@ CT-02 (Responsividade do Grid / Caixa de Pesquisa): FAIL — Foi identificada um
 
 CT-03 (Busca por Caracteres Inválidos): PASS — O sistema não gerou erros de exceção no console ao receber caracteres especiais. A falta do feedback "Nenhum resultado encontrado" ao pesquisar caracteres inválidos não entra como bug, apenas um ponto de molhoria, pois não impactou no funcionamento da caixa de pesquisa.
 
-## 🐛 4. Relatório de Bug Encontrado (Bug Report)
+## 🐛 5. Relatório de Bug Encontrado (Bug Report)
 
 * **ID do Bug:** BUG-001
 * **Título:** Quebra de layout (Overflow) na mensagem de feedback da busca em dispositivos mobile.

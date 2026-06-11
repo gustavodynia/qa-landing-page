@@ -58,23 +58,23 @@ Para a execução dos testes, foi utilizado o ambiente de homologação pública
 
 > 📝 **Nota do Q.A. (Evidência Técnica):** Ao digitar `@`, o sistema ignorou a busca e manteve a listagem de ferramentas padrão visível, em vez de alertar o usuário sobre a falta de resultados para aquele termo específico. Nenhuma requisição de rede foi disparada (filtro puramente local via JavaScript).
 
-🏁 4. Encerramento e Conclusão (STLC - Fase 6)
+### 🏁 4. Encerramento e Conclusão (STLC - Fase 6)
 
-Total de Casos de Teste Planejados: 3
+* **Total de Casos de Teste Planejados:** 3
 
-Total de Casos de Teste Executados: 3
+* **Total de Casos de Teste Executados:** 3
 
-Testes com Sucesso (PASS): 2
+* **Testes com Sucesso (PASS):** 2
 
-Bugs Encontrados (FAIL): 1
+* **Bugs Encontrados (FAIL):** 1
 
-Resumo da Execução:
+### Resumo da Execução:
 
-CT-01 (Redirecionamento do Botão de Ação): PASS — O link "Acessar site oficial" de cada IA redirecionou o usuário perfeitamente para as URLs externas correspondentes.
+* **CT-01 (Redirecionamento do Botão de Ação):** **PASS** – O link "Acessar site oficial" de cada IA redirecionou o usuário perfeitamente para as URLs externas correspondentes.
 
-CT-02 (Responsividade do Grid / Caixa de Pesquisa): FAIL — Foi identificada uma quebra de layout (overflow de texto) quando o usuário digita strings longas sem espaços na barra de busca, afetando dispositivos de viewports específicas (como Pixel 7 e iPhone SE).
+* **CT-02 (Responsividade do Grid / Caixa de Pesquisa):** **FAIL** – Foi identificada uma quebra de layout (overflow de texto) quando o usuário digita strings longas sem espaços na barra de busca, afetando dispositivos de viewports específicas (como Pixel 7 e iPhone SE).
 
-CT-03 (Busca por Caracteres Inválidos): PASS — O sistema não gerou erros de exceção no console ao receber caracteres especiais. A falta do feedback "Nenhum resultado encontrado" ao pesquisar caracteres inválidos não entra como bug, apenas um ponto de molhoria, pois não impactou no funcionamento da caixa de pesquisa.
+* **CT-03 (Busca por Caracteres Inválidos):** **PASS** – O sistema não gerou erros de exceção no console ao receber caracteres especiais. A falta do feedback visual de "Nenhum resultado encontrado" entra como oportunidade de melhoria técnica.
 
 ## 🐛 5. Relatório de Bug Encontrado (Bug Report)
 

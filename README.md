@@ -1,4 +1,4 @@
-# 🧪 Projeto Prático de Modelagem de Testes - STLC
+# Projeto Prático de Modelagem de Testes - STLC
 
 Este repositório contém a documentação do Ciclo de Vida de Testes de Software (STLC) aplicado a uma Landing Page real com catálogo de IA's para cada segmento de uso (`https://ailearningslp.netlify.app/`). 
 
@@ -6,7 +6,7 @@ O objetivo deste projeto é demonstrar a estruturação de cenários, casos de t
 
 ---
 
-## 🔄 1. Análise de Requisitos e Cenários de Teste (STLC - Fase 1 a 3)
+## 1. Análise de Requisitos e Cenários de Teste (STLC - Fase 1 a 3)
 
 Como o sistema não possuía uma especificação técnica formal (SDR), foi realizada uma análise exploratória da interface para mapear as regras de negócio implícitas na seção `#catalogo`.
 
@@ -17,7 +17,7 @@ Como o sistema não possuía uma especificação técnica formal (SDR), foi real
 
 ---
 
-## 🏗️ 2. Planejamento e Configuração do Ambiente (STLC - Fase 4)
+## 2. Planejamento e Configuração do Ambiente (STLC - Fase 4)
 
 Para a execução dos testes, foi utilizado o ambiente de homologação pública hospedado na plataforma Netlify através da URL oficial fornecida. 
 * **Massa de Dados:** Foram mapeados os cards de ferramentas reais de IA já renderizados na interface.
@@ -25,7 +25,7 @@ Para a execução dos testes, foi utilizado o ambiente de homologação pública
 
 ---
 
-## 📋 3. Execução dos Casos de Teste (STLC - Fase 5)
+## 3. Execução dos Casos de Teste (STLC - Fase 5)
 
 ### CT-01: Validar redirecionamento dos botões de ação do catálogo
 * **Pré-condição:** Navegador atualizado e conexão com a internet ativa.
@@ -56,9 +56,9 @@ Para a execução dos testes, foi utilizado o ambiente de homologação pública
 | :--- | :--- | :--- | :--- |
 | **1** | Digitar um caractere especial isolado (ex: `@`) na caixa de texto | O sistema deve tratar o caractere como texto comum e ocultar os cards, exibindo uma mensagem de "Nenhum resultado encontrado". | **FAIL** |
 
-> 📝 **Nota do Q.A. (Evidência Técnica):** Ao digitar `@`, o sistema ignorou a busca e manteve a listagem de ferramentas padrão visível, em vez de alertar o usuário sobre a falta de resultados para aquele termo específico. Nenhuma requisição de rede foi disparada (filtro puramente local via JavaScript).
+> **Nota do Q.A. (Evidência Técnica):** Ao digitar `@`, o sistema ignorou a busca e manteve a listagem de ferramentas padrão visível, em vez de alertar o usuário sobre a falta de resultados para aquele termo específico. Nenhuma requisição de rede foi disparada (filtro puramente local via JavaScript).
 
-### 🏁 4. Encerramento e Conclusão (STLC - Fase 6)
+### 4. Encerramento e Conclusão (STLC - Fase 6)
 
 * **Total de Casos de Teste Planejados:** 3
 
@@ -76,7 +76,7 @@ Para a execução dos testes, foi utilizado o ambiente de homologação pública
 
 * **CT-03 (Busca por Caracteres Inválidos):** **PASS** – O sistema não gerou erros de exceção no console ao receber caracteres especiais. A falta do feedback visual de "Nenhum resultado encontrado" entra como oportunidade de melhoria técnica.
 
-## 🐛 5. Relatório de Bug Encontrado (Bug Report)
+## 5. Relatório de Bug Encontrado (Bug Report)
 
 * **ID do Bug:** BUG-001
 * **Título:** Quebra de layout (Overflow) na mensagem de feedback da busca em dispositivos mobile.
@@ -105,7 +105,7 @@ O texto foge do enquadramento lateral direito da tela, gerando quebra visual do 
 
 ---
 
-### 🛠️ Sugestão de Correção Técnica (Para o Desenvolvedor):
+### Sugestão de Correção Técnica (Para o Desenvolvedor):
 Inserir uma validação no campo de busca para haver a quebra de linha a partir de um número de caracteres seguros, evitando o avanço além das margens.
 
 ---
@@ -132,5 +132,5 @@ O sistema força um redirecionamento de foco/scroll a cada caractere, fazendo a 
 
 ---
 
-### 🛠️ Sugestão de Correção Técnica (Para o Desenvolvedor):
+### Sugestão de Correção Técnica (Para o Desenvolvedor):
 Desabilitar uma possível pesquisa em tempo real. Disparar a requisição apenas após o Enter do usuário. 
